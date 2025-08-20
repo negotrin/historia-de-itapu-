@@ -1,0 +1,207 @@
+/* ==========================
+   Estilo Geral
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* Define a imagem de fundo */
+  background-image: url("pngtree-itapua-lighthouse-in-salvador-reef-sea-travel-photo-image_48039832.jpg");
+  background-size: cover;       /* Faz a imagem cobrir toda a tela */
+  background-position: center;  /* Centraliza a imagem */
+  background-attachment: fixed; /* Mantém fixa no fundo ao rolar a página */
+  background-repeat: no-repeat; /* Evita repetição */
+  color: #fff;                  /* Ajusta cor do texto para contraste */
+}
+
+
+/* ==========================
+   Cabeçalho
+========================== */
+header {
+  display: flex;           /* organiza conteúdo em linha */
+  align-items: center;     /* centraliza verticalmente */
+  justify-content: space-between; /* espaço entre logo e menu/título */
+  padding: 10px 20px;
+  background-color: #637cec; /* cor de fundo do cabeçalho */
+}
+
+header .logo {
+  height: 60px;            /* tamanho da imagem */
+  width: auto;
+  margin-right: 15px;      /* espaço entre logo e título */
+}
+
+/* Se quiser o título mais próximo da logo */
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(48, 208, 248);
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: white;
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: #ffe066;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* ==========================
+   Seções
+========================== */
+section {
+  padding: 3rem 10%;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f9fbfc;
+}
+
+/* Estilo para a seção Curiosidades */
+#curiosidades {
+  background-color: #4a8cc2;  /* fundo amarelo suave */
+  color: #2d3436;             /* texto cinza escuro para contraste */
+  padding: 20px 20px;         /* espaçamento interno */
+  border-radius: 12px;        /* cantos arredondados */
+  margin: 05px auto;          /* espaçamento externo */
+  max-width: 700px;           /* largura máxima centralizada */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* sombra para destaque */
+  text-align: center;         /* centraliza o texto */
+}
+
+#curiosidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* joga o texto pro lado direito */
+  text-align: center;   /* mantém justificado nas linhas */
+}
+
+
+/* Subtítulo / descrição */
+#curiosidades h3 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2d3436;  /* mantém leitura suave */
+}
+
+
+
+section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ==========================
+   Música
+========================== */
+#audioItapua, audio {
+  margin-top: 1rem;
+  width: 80%;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ==========================
+   Galeria
+========================== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+}
+
+.galeria img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ==========================
+   Rodapé
+========================== */
+footer {
+  background: #00334e;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   Responsividade
+========================== */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #0096c7;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+
+  section {
+    padding: 2rem 5%;
+  }
+}
