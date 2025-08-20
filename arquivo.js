@@ -39,10 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const audioContainer = document.createElement('div');
   audioContainer.classList.add('audio-controls');
 
-  audioContainer.innerHTML = `
-    <button id="playPause">▶️ Tocar / Pausar</button>
-    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
-  `;
   document.querySelector('#musica').appendChild(audioContainer);
 
   const playPauseBtn = document.getElementById('playPause');
